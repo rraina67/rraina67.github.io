@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="mini-style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Photo Gallery</h1>
+  </header>
+
+  <section>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <script>
+    const images = [
+      { file: "photo1.jpg", caption: "Cilantro1" },
+      { file: "photo2.jpg", caption: "Cilantro2" },
+      { file: "photo3.jpg", caption: "Cilantro3" },
+      { file: "photo4.jpg", caption: "Cilantro4" },
+      { file: "photo1.jpg", caption: "Cilantro1" },
+      { file: "photo2.jpg", caption: "Cilantro2" },
+      { file: "photo3.jpg", caption: "Cilantro3" },
+      { file: "photo4.jpg", caption: "Cilantro4" },
+      { file: "photo1.jpg", caption: "Cilantro1" },
+      { file: "photo2.jpg", caption: "Cilantro2" },
+      { file: "photo3.jpg", caption: "Cilantro3" },
+      { file: "photo4.jpg", caption: "Cilantro4" },
+
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    images.forEach(img => {
+      const figure = document.createElement("figure");
+
+      const image = document.createElement("img");
+      image.src = `img/${img.file}`;
+      image.alt = img.caption;
+
+      const caption = document.createElement("figcaption");
+      caption.textContent = img.caption;
+
+      figure.appendChild(image);
+      figure.appendChild(caption);
+      gallery.appendChild(figure);
+    });
+  </script>
+</body>
+</html>
