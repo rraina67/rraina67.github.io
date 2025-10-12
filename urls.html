@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic URL and Description Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto; /* This allows dynamic column sizing */
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      word-break: break-all; /* Prevents long URLs from overflowing */
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Useful Links and Descriptions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>URL</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.example.com" target="_blank">https://www.example.com</a></td>
+        <td>Example website for demonstration purposes.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.wikipedia.org" target="_blank">https://www.wikipedia.org</a></td>
+        <td>Free online encyclopedia with articles on a wide range of topics.</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</body>
+</html>
