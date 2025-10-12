@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Running Blog</title>
+  <link rel="stylesheet" href="blog-style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏃‍♂️ My Running Blog</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="blog.html" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <main id="blog-container">
+    <!-- Blog posts will be loaded here -->
+
+NOT SURE WHAT IS HAPPENING
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Running Blog</p>
+  </footer>
+
+  <script>
+    const posts = [
+      {
+        title: "Trail Run Through the Forest",
+        date: "October 10, 2025",
+        image: "images/trail.jpg",
+        file: "posts/trail-run.txt"
+      },
+      {
+        title: "Gear Review: My Favorite Running Shoes",
+        date: "October 5, 2025",
+        image: "images/gear.jpg",
+        file: "posts/gear-review.txt"
+      },
+      {
+        title: "Sunrise Run by the Lake",
+        date: "September 28, 2025",
+        image: "images/run1.jpg",
+        file: "posts/sunrise-run.txt"
+      }
+    ];
+
+    const container = document.getElementById("blog-container");
+
+    posts.forEach(post => {
+      fetch(post.file)
+        .then(response => response.text())
+        .then(text => {
+          const article = document.createElement("article");
+          article.className = "post";
+          article.innerHTML = `
+            <h2>${post.title}</h2>
+            <p class="date">${post.date}</p>
+            <img src="${post.image}" alt="${post.title}" />
+            <p>${text}</p>
+          `;
+          container.appendChild(article);
+        })
+        .catch(error => {
+          console.error("Error loading post:", post.file, error);
+        });
+    });
+  </script>
+</body>
+</html>
