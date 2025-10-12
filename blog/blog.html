@@ -17,8 +17,6 @@
 
   <main id="blog-container">
     <!-- Blog posts will be loaded here -->
-
-NOT SURE WHAT IS HAPPENING
   </main>
 
   <footer>
@@ -56,10 +54,16 @@ NOT SURE WHAT IS HAPPENING
           const article = document.createElement("article");
           article.className = "post";
           article.innerHTML = `
-            <h2>${post.title}</h2>
-            <p class="date">${post.date}</p>
-            <img src="${post.image}" alt="${post.title}" />
-            <p>${text}</p>
+            <div class="post-content">
+              <div class="text">
+                <h2>${post.title}</h2>
+                <p class="date">${post.date}</p>
+                <p>${text}</p>
+              </div>
+              <div class="image">
+                <img src="${post.image}" alt="${post.title}" />
+              </div>
+            </div>
           `;
           container.appendChild(article);
         })
