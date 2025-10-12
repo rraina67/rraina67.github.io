@@ -38,7 +38,7 @@ nav a:hover {
 
 /* Blog posts */
 main {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -46,6 +46,29 @@ main {
   background: #fff;
   padding: 20px;
   margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.post-content .text {
+  flex: 1 1 300px;
+}
+
+.post-content .image {
+  flex: 1 1 300px;
+}
+
+.post-content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -58,13 +81,6 @@ main {
 .post .date {
   font-size: 0.9em;
   color: #777;
-  margin-bottom: 15px;
-}
-
-.post img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
   margin-bottom: 15px;
 }
 
