@@ -11,23 +11,23 @@ body {
   color: #333;
   line-height: 1.6;
 }
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
 
+/* Wrapper */
 .wrapper {
   max-width: 1000px;
   margin: auto;
 }
 
-/* Banner image */
+/* Header */
 .header {
-  background-image: url('img/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 250px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Top section */
@@ -62,12 +62,15 @@ header {
 /* Profile image */
 .top_profile {
   flex: 1 1 30%;
-  background-image: url('img/profile.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
   margin: 20px auto;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
 }
 
 /* Social links */
@@ -92,28 +95,13 @@ header {
   text-decoration: underline;
 }
 
-/* Gallery styles */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
 
-figure {
-  margin: 0;
-  text-align: center;
-}
-
-figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-figcaption {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #555;
+  .top_profile {
+    max-width: 150px;
+  }
 }
