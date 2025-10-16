@@ -59,49 +59,6 @@ body {
   text-decoration: underline;
 }
 
-/* Profile image */
+/* Profile image container */
 .top_profile {
-  flex: 1 1 30%;
-  max-width: 200px;
-  margin: 20px auto;
-}
-
-.profile-img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  display: block;
-}
-
-/* Social links */
-.social {
-  margin-top: 20px;
-}
-
-.social_item {
-  margin-bottom: 10px;
-}
-
-.social_item i {
-  margin-right: 8px;
-}
-
-.social_copy {
-  color: #333;
-  text-decoration: none;
-}
-
-.social_copy:hover {
-  text-decoration: underline;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .title {
-    font-size: 2em;
-  }
-
-  .top_profile {
-    max-width: 150px;
-  }
-}
+  flex: 1 1 30
