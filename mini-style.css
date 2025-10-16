@@ -65,7 +65,7 @@ header {
   background-image: url('img/profile.jpg');
   background-size: cover;
   background-position: center;
-  width: 200px;
+  width: 100%;
   height: auto;
   margin: 20px auto;
 }
@@ -117,5 +117,6 @@ figcaption {
   font-size: 14px;
   color: #555;
 }
+
 
 
